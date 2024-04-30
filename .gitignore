@@ -1,2 +1,3 @@
 *.o
+*.rgb
 playpal2rgb
