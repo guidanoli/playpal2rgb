@@ -1,8 +1,10 @@
+CCFLAGS=-O2
+
 playpal2rgb: playpal2rgb.o
-	$(CC) $^ -o $@
+	$(CC) $^ -o $@ $(CCFLAGS)
 
 %.o: %.c
-	$(CC) -c $< -o $@
+	$(CC) -c $< -o $@ $(CCFLAGS)
 
 .PHONY: clean
 clean:
