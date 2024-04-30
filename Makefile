@@ -1,4 +1,4 @@
-playpal2rgb: playpal.o playpal2rgb.o
+playpal2rgb: playpal2rgb.o
 	$(CC) $^ -o $@
 
 %.o: %.c
@@ -6,4 +6,4 @@ playpal2rgb: playpal.o playpal2rgb.o
 
 .PHONY: clean
 clean:
-	rm -f *.o playpal2rgb
+	rm -vf *.o playpal2rgb
