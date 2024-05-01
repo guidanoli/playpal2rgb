@@ -14,9 +14,8 @@ make
 ## Usage
 
 The tool takes the path of a palette file as argument, reads the image in PLAYPAL format from `stdin` and writes out the image in RGB format to `stdout`.
-It can be combined in conjunction with the `convert` tool from ImageMagick to produce an output image in PNG format.
+This output can be piped to the `convert` tool from ImageMagick to produce an output file in PNG format.
 
 ```sh
-./playpal2rgb palette.raw < framebuffer.raw > framebuffer.rgb
-convert -depth 8 -size 320x200 framebuffer.rgb framebuffer.png
+./playpal2rgb palette.raw < framebuffer.raw | convert -depth 8 -size 320x200 rgb:- framebuffer.png
 ```
